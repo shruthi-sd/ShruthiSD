@@ -518,6 +518,25 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+
+          {/* More Projects Coming Soon Section - Compact Version */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-12 text-center max-w-2xl mx-auto"
+          >
+            <div className="bg-gray-800/30 rounded-2xl p-6 border border-cyan-400/20 cyber-glow backdrop-blur-sm">
+              <div className="flex items-center justify-center space-x-4 mb-4">
+                <h3 className="text-xl font-bold text-cyan-400 terminal-text">
+                  More Projects Coming Soon
+                </h3>
+              </div>
+              <p className="text-gray-300 text-sm mb-4 terminal-text">
+                Working on new exciting projects. Stay tuned!
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
