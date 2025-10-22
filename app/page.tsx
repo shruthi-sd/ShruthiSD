@@ -422,37 +422,82 @@ export default function Home() {
                 </motion.div>
               </div>
               
-              <motion.div
+            <motion.div
   initial={{ opacity: 0, x: 30 }}
   whileInView={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.6 }}
   className="relative"
 >
-  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl w-full aspect-square max-w-md mx-auto shadow-2xl border border-cyan-400/30 cyber-glow backdrop-blur-sm overflow-hidden">
-    <img 
-      src="/profile.jpeg" 
-      alt="Shruthi SD"
-      className="w-full h-full object-cover"
-    />
-  </div>
-  {/* Floating cards remain the same */}
-      <motion.div
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 4, repeat: Infinity }}
-        className="absolute -bottom-6 -left-6 bg-gray-900 rounded-2xl p-6 shadow-xl border border-cyan-400/30 cyber-glow backdrop-blur-sm"
-      >
-        <div className="text-2xl font-bold text-cyan-400 terminal-text">1.7+</div>
-        <div className="text-gray-400 text-sm terminal-text">Years Experience</div>
-      </motion.div>
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-        className="absolute -top-6 -right-6 bg-gray-900 rounded-2xl p-6 shadow-xl border border-purple-400/30 cyber-glow backdrop-blur-sm"
-      >
-        <div className="text-2xl font-bold text-purple-400 terminal-text">125+</div>
-        <div className="text-gray-400 text-sm terminal-text">DSA Problems</div>
-      </motion.div>
+  <div className="bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl w-full aspect-square max-w-md mx-auto shadow-2xl border border-cyan-400/20 cyber-glow backdrop-blur-sm p-8 flex flex-col justify-center items-center">
+    
+    {/* Central focus element */}
+    <motion.div
+      animate={{ 
+        scale: [1, 1.1, 1],
+        rotate: [0, 5, -5, 0]
+      }}
+      transition={{ 
+        duration: 6,
+        repeat: Infinity 
+      }}
+      className="text-6xl mb-4 text-cyan-400"
+    >
+      
     </motion.div>
+    
+    <motion.h3
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.5 }}
+      className="text-2xl font-bold text-cyan-400 terminal-text text-center mb-2"
+    >
+      Salesforce & Full Stack
+    </motion.h3>
+    
+    <motion.p
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.7 }}
+      className="text-gray-300 text-sm terminal-text text-center"
+    >
+      Developer & Problem Solver
+    </motion.p>
+
+    {/* Animated dots */}
+    <div className="absolute bottom-6 flex space-x-2">
+      {[1, 2, 3].map((dot) => (
+        <motion.div
+          key={dot}
+          animate={{ scale: [1, 1.5, 1] }}
+          transition={{ 
+            duration: 1.5, 
+            repeat: Infinity, 
+            delay: dot * 0.3 
+          }}
+          className="w-2 h-2 bg-cyan-400 rounded-full"
+        />
+      ))}
+    </div>
+  </div>
+
+  {/* Keep floating cards */}
+  <motion.div
+    animate={{ y: [0, -10, 0] }}
+    transition={{ duration: 4, repeat: Infinity }}
+    className="absolute -bottom-6 -left-6 bg-gray-900 rounded-2xl p-6 shadow-xl border border-cyan-400/30 cyber-glow backdrop-blur-sm"
+  >
+    <div className="text-2xl font-bold text-cyan-400 terminal-text">1.7+</div>
+    <div className="text-gray-400 text-sm terminal-text">Years Experience</div>
+  </motion.div>
+  <motion.div
+    animate={{ y: [0, 10, 0] }}
+    transition={{ duration: 4, repeat: Infinity, delay: 1 }}
+    className="absolute -top-6 -right-6 bg-gray-900 rounded-2xl p-6 shadow-xl border border-purple-400/30 cyber-glow backdrop-blur-sm"
+  >
+    <div className="text-2xl font-bold text-purple-400 terminal-text">125+</div>
+    <div className="text-gray-400 text-sm terminal-text">DSA Problems</div>
+  </motion.div>
+</motion.div>
             </div>
           </motion.div>
         </div>
