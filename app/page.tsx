@@ -163,7 +163,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             className="text-2xl font-bold text-cyan-400 terminal-text"
           >
-            Initializing System...
+            Initializing Portfolio...
           </motion.h2>
         </motion.div>
       </div>
